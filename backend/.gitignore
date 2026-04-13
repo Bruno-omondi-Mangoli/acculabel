@@ -1,0 +1,45 @@
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment (CRITICAL)
+venv/
+.env/
+
+# Environment variables
+.env
+
+# Uploaded files (you don’t want these in Git)
+uploads/
+video_uploads/
+pointcloud_uploads/
+
+# Database (if using SQLite)
+*.db
+*.sqlite3
+
+# Logs
+*.log
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.bak
+
+# Python build files
+build/
+dist/
+*.egg-info/
+
+# Testing / coverage
+.coverage
+htmlcov/
+.pytest_cache/
