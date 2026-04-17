@@ -72,7 +72,7 @@ const Dashboard = () => {
               {images.map((image) => (
                 <div key={image.id} style={styles.imageCard}>
                   <img
-                    src={`http://localhost:8000${image.url}`}
+                  src={`${import.meta.env.VITE_API_URL}${image.url}`}
                     alt={image.original_filename}
                     style={styles.thumbnail}
                   />
