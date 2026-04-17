@@ -1026,7 +1026,7 @@ const Annotate = () => {
             
             <div style={styles.canvasContainer} ref={containerRef}>
               <div style={{ transform: `scale(${zoom}) translate(${panOffset.x}px, ${panOffset.y}px)`, transformOrigin: "0 0", display: "inline-block" }}>
-                <img ref={imageRef} src={`http://localhost:8000${image?.url || uploadedFile?.url}`} alt="Annotate" style={{ display: "block", maxWidth: "none" }} crossOrigin="anonymous" onLoad={drawAllAnnotations} />
+                <img ref={imageRef} src={`${import.meta.env.VITE_API_URL}${image?.url || uploadedFile?.url}`} alt="Annotate" style={{ display: "block", maxWidth: "none" }} crossOrigin="anonymous" onLoad={drawAllAnnotations} />
                 <canvas ref={canvasRef} onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} style={styles.canvas} />
               </div>
             </div>
@@ -1039,7 +1039,7 @@ const Annotate = () => {
                 <div style={styles.compareImagesContainer}>
                   <div style={styles.compareImageBox}>
                     <h4>Image A (Current)</h4>
-                    <img src={`http://localhost:8000${image?.url || uploadedFile?.url}`} alt="Current" style={styles.compareThumbnail} />
+                    <img src={`${import.meta.env.VITE_API_URL}${image?.url || uploadedFile?.url}`} alt="Current" style={styles.compareThumbnail} />
                     <p>Current Image</p>
                   </div>
                   
